@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#f5b800"/>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="pascoal.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Pascoal Fernandes</title>
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo ao site de Pascoal Fernandes</h1>
+  </header>
+  <main>
+    <p>Este é um aplicativo simples com informações básicas, funcionando como um PWA (Progressive Web App).</p>
+    <p>Adicione à tela inicial para usá-lo como um aplicativo!</p>
+  </main>
+  <footer>
+    <p>&copy; 2025 Pascoal Fernandes</p>
+  </footer>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log("Service Worker registrado."))
+        .catch((error) => console.log("Erro ao registrar Service Worker:", error));
+    }
+  </script>
+</body>
+</html>
